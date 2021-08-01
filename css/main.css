@@ -10,11 +10,14 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 10px;
   line-height: 1.4;
+	font-family: 'Playfair Display Bold', serif;
 }
 
 /*
@@ -86,6 +89,47 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Hero section */
+#hero {
+	background-image: url(../img/hero-bg.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: .55;
+	z-index: -1;
+}
+
+/* End hero section */
+
 
 /* ==========================================================================
    Helper classes
