@@ -94,7 +94,6 @@ textarea {
 :root {
 	--main-bg-color: #158d9c;
 	--main-mochromatic-color: #1BB6C9;
-	--main-complementary-color: #1BB6C9;
 }
 /** End of global values, Colors etc **/
 
@@ -164,19 +163,9 @@ a {
 	animation-delay: 2s;
 }
 #hero h1:nth-child(3){
+	animation: text_reveal2 .5s ease forwards;
 	animation-delay: 3s;
 }
-#hero h1:nth-child(1) span {
-	animation-delay: .5s;
-}
-#hero h1:nth-child(2) span {
-	animation-delay: 1.5s;
-}
-#hero h1:nth-child(3) span {
-	animation-delay: 2.5s;
-}
-
-
 
 #hero h1 span{
 	position: absolute;
@@ -188,6 +177,16 @@ a {
 	animation: text_reveal_overlay 1s ease;
 	animation-delay: .5s;
 
+}
+
+#hero h1:nth-child(1) span {
+	animation-delay: .5s;
+}
+#hero h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+	animation-delay: 2.5s;
 }
 
 #hero .cta{
@@ -224,6 +223,11 @@ a {
 @keyframes text_reveal{
 	100%{
 		color: white;
+	}
+}
+@keyframes text_reveal2{
+	100%{
+		color: var(--main-mochromatic-color);
 	}
 }
 /* End of Keyframes */
