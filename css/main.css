@@ -90,9 +90,22 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/** Global values, Colors etc **/
+:root {
+	--main-bg-color: #158d9c;
+	--main-mochromatic-color: #1BB6C9;
+	--main-complementary-color: #1BB6C9;
+}
+/** End of global values, Colors etc **/
+
 * {
-	padding: 0;
-	margin: 0;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+h1 {
+	padding: 0px;
+	margin: 0px;
 	box-sizing: border-box;
 }
 
@@ -128,7 +141,92 @@ a {
 	z-index: -1;
 }
 
+#hero .hero{
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#hero h1{
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal .5s ease forwards;
+	animation-delay: 1s;
+}
+/* Used for text animations*/
+#hero h1:nth-child(1){
+	animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+	animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+	animation-delay: 3s;
+}
+#hero h1:nth-child(1) span {
+	animation-delay: .5s;
+}
+#hero h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+
+
+
+#hero h1 span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0%;
+	background-color: var(--main-bg-color);
+	animation: text_reveal_overlay 1s ease;
+	animation-delay: .5s;
+
+}
+
+#hero .cta{
+	display: block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid var(--main-bg-color);
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;;
+}
+
+#hero .cta:hover{
+	color: white;
+	background-color: var(--main-bg-color);
+}
 /* End hero section */
+
+/* Keyframes */
+@keyframes text_reveal_overlay{
+	50%{
+		width: 100%;
+		left: 0;
+	}
+	100%{
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal{
+	100%{
+		color: white;
+	}
+}
+/* End of Keyframes */
 
 
 /* ==========================================================================
@@ -245,9 +343,6 @@ a {
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
   }
 
   a,
