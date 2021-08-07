@@ -325,7 +325,7 @@ p {
 /* Projects section */
 #projects .projects{
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
@@ -400,9 +400,125 @@ p {
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
-
-
 /* End Projects section */
+
+/* About section */
+#about .about{
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+
+#about .about-img-container{
+	width: 250px;
+	height: 360px;
+}
+
+#about .about-info{
+	width: 100%
+}
+
+#about .about-info h2{
+	font-size: 1.6rem;
+	font-weight: 400;
+	letter-spacing: .2rem;
+	margin-bottom: 10px
+}
+
+#about .about-info p{
+	margin-bottom: 15px;
+}
+
+#about .about-info .cta{
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: transparent;
+	border: 2px solid var(--main-bg-color);
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+	-webkit-appearance: none;
+	color: var(--main-complementary-color);
+	margin-bottom: 45px;
+}
+
+#about .about-info .cta:hover{
+	color: white;
+	background-color: var(--main-bg-color);
+}
+
+#about .about-img-container .about-img{
+	position: relative;
+	border: 10px solid white;
+	height: 100%;
+	width: 100%;
+}
+
+#about .about-img-container .about-img::after{
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid var(--main-bg-color);
+	z-index: -1;
+}
+/* End About section */
+
+/* Contact section */
+#contact .contact{
+	flex-direction: column;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+#contact .contact-items{
+	width: 400px;
+}
+
+#contact .contact-item{
+	width: 80%;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 8px 0px 18px 0 #0000802c;
+	flex-direction: column;
+}
+
+#contact .icon{
+	width: 70px;
+	margin: 0 auto 10px;
+}
+
+#contact .icons{
+	flex-direction: row;
+	display: flex;
+}
+
+#contact .contact-info h1{
+	font-size: 2.5rem;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+#contact .contact-info h2{
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: bold;
+}
+
+/* End contact section */
+
 
 
 
