@@ -485,14 +485,19 @@ p {
 #contact .contact-item{
 	width: 80%;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 15px;
 	padding: 30px;
 	margin: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 8px 0px 18px 0 #0000802c;
+	box-shadow: 0px 0px 18px 0 #0000002c;
 	flex-direction: column;
+	transition: .3s ease box-shadow;
+}
+
+#contact .contact-item:hover{
+	box-shadow: 0px 0px 5px 0 #0000002c;
 }
 
 #contact .icon{
@@ -507,17 +512,89 @@ p {
 
 #contact .contact-info h1{
 	font-size: 2.5rem;
-	font-weight: 400;
+	font-weight: bold;
 	margin-bottom: 5px;
 }
 
 #contact .contact-info h2{
 	font-size: 1.3rem;
 	line-height: 2rem;
-	font-weight: bold;
+	font-weight: 400;
 }
 
+#contact .contact-item a{
+	color: #0f7afc;
+	border-bottom-color: rgba(15, 122, 252, 0.2);
+	text-decoration:none
+}
+
+#contact .contact-item a:hover{
+	color:#cf0000;
+	border-bottom-color: rgba(208, 64, 0, 0.2);
+	text-decoration:none
+}
+
+#contact .contact-item a:visited{
+	color: #800080;
+	border-bottom-color: rgba(128,  0, 128, 0.2);
+	text-decoration:none
+}
 /* End contact section */
+
+/* Footer section */
+#footer {
+	background-image: linear-gradient(60deg, #29323c 0%, #385563 100%);
+}
+
+#footer .footer {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+#footer .footer-info h1{
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+
+#footer .footer-info span{
+	color: var(--main-complementary-color);
+}
+
+#footer .social-medias{
+	display: flex;
+	margin-bottom: 30px;
+}
+
+#footer .social-media{
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+
+#footer .social-media img{
+	filter: grayscale(1);
+	transition: .3s ease filter
+}
+
+#footer .social-media:hover img{
+	filter: grayscale(0);
+}
+
+#footer .social-media a{
+	color: #0f7afc;
+	border-bottom-color: rgba(15, 122, 252, 0.2);
+	text-decoration:none
+}
+
+#footer .social-media a:hover{
+	color:#cf0000;
+	border-bottom-color: rgba(208, 64, 0, 0.2);
+	text-decoration:none
+}
+/* End Footer section */
 
 
 
@@ -634,8 +711,42 @@ p {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  .cta{
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	#hero h1{
+		font-size: 6.9rem;
+	}
+
+	#service .service-bottom .service-item{
+		flex-basis: 45%;
+		margin: 2%;
+	}
+
+	#projects .project-item{
+		height: 400px;
+		margin: 0;
+		flex-direction: row;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .project-item:nth-child(even){
+		flex-direction: row-reverse;
+	}
+
+	#projects .projects-bottom .project-info{
+		height: 100%;
+	}
+
+	#projects .projects-bottom .project-img{
+		height: 100%;
+	}
 }
 
 @media print,
