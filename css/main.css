@@ -265,8 +265,7 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 40px;
-
+	margin-top: 40px
 }
 #service .service-item{
 	flex-basis: 80%;
