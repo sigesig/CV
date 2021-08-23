@@ -19,9 +19,29 @@ hamburger.addEventListener('click', () => {
 
 menu_item.forEach((item) => {
 	item.addEventListener('click', () => {
+		console.log("You just pressed " + item.innerHTML)
 		hamburger.classList.toggle('active');
 		menu_mobile.classList.toggle('active');
 	});
 });
 
 
+
+// Helper functions
+function detectBrowser() {
+	if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) !== -1 ) {
+		return 'Opera';
+	} else if(navigator.userAgent.indexOf("Chrome") !== -1 ) {
+		return 'Chrome';
+	} else if(navigator.userAgent.indexOf("Safari") !== -1) {
+		return 'Safari';
+	} else if(navigator.userAgent.indexOf("Firefox") !== -1 ){
+		return 'Firefox';
+	} else {
+		return 'Unknown';
+	}
+}
+
+// kick off the polyfill!
+//import smoothscroll from 'smoothscroll-polyfill';
+//smoothscroll.polyfill();
