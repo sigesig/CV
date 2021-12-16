@@ -19,9 +19,10 @@ hamburger.addEventListener('click', () => {
 
 menu_item.forEach((item) => {
 	item.addEventListener('click', () => {
-		console.log("You just pressed " + item.innerHTML)
-		hamburger.classList.toggle('active');
-		menu_mobile.classList.toggle('active');
+		if(window.innerWidth < 1200){
+			hamburger.classList.toggle('active');
+			menu_mobile.classList.toggle('active');
+		}
 	});
 });
 

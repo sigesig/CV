@@ -691,7 +691,7 @@ p {
 #contact .contact-items{
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-evenly;
 	margin: 0;
 	padding: 50px;
