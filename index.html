@@ -43,10 +43,10 @@
 						<div class="bar"></div>
 					</div>
 					<ul>
-						<li><a href="#hero" data-after="Home">Home</a></li>
 						<li><a href="#service" data-after="Services">Services</a></li>
 						<li><a href="#projects" data-after="Projects">Projects</a></li>
 						<li><a href="#about" data-after="About">About</a></li>
+						<li><a href="#timeline" data-after="timeline">Timeline</a></li>
 						<li><a href="#contact" data-after="Contact">Contact</a></li>
 					</ul>
 				</div>
@@ -64,9 +64,9 @@
           <h1>Hello,<span></span></h1>
 					<h1>My name is <span></span></h1>
 					<h1>Victor Kjelde <span></span></h1>
-          <a href="#projects" type="button" class="cta">Portfolio</a>
         </div>
-      </div>
+				<div class="scroll-arrow"></div>
+			</div>
   </section>
 
 	<!-- Service section -->
@@ -176,6 +176,61 @@
 		</div>
 	</section>
 
+	<!-- Timeline section -->
+	<section id="timeline">
+		<div class="timeline container">
+			<h1 class="section-title">Experience <span>Timeline</span></h1>
+			<div class="flex-parent">
+				<div class="input-flex-container">
+					<input type="radio" name="timeline-dot" data-description="2013">
+					<div class="dot-info" data-description="2013">
+						<span class="year">2013</span>
+						<span class="label">Flex Trim A/S</span>
+					</div>
+					<input type="radio" name="timeline-dot" data-description="2014">
+					<div class="dot-info" data-description="2014">
+						<span class="year">2014</span>
+						<span class="label">Libratone A/S</span>
+					</div>
+					<input type="radio" name="timeline-dot" data-description="2015">
+					<div class="dot-info" data-description="2015">
+						<span class="year">2015</span>
+						<span class="label">Café Holmen & HTX</span>
+					</div>
+					<input type="radio" name="timeline-dot" data-description="2016">
+					<div class="dot-info" data-description="2016">
+						<span class="year">2016</span>
+						<span class="label">Floorball Coach</span>
+					</div>
+					<input type="radio" name="timeline-dot" data-description="2018">
+					<div class="dot-info" data-description="2018">
+						<span class="year">2018</span>
+						<span class="label">B.Sc. in CS start</span>
+					</div>
+					<input type="radio" name="timeline-dot" data-description="2021">
+					<div class="dot-info" data-description="2021">
+						<span class="year">2021</span>
+						<span class="label">M.Sc. in CS start</span>
+					</div>
+					<input type="radio" name="timeline-dot" data-description="2021-1" checked>
+					<div class="dot-info" data-description="2021-1">
+						<span class="year">2021</span>
+						<span class="label">Systematic A/S</span>
+					</div>
+					<div id="timeline-descriptions-wrapper">
+						<p data-description="2013">And future Call of Duty players would thank them.</p>
+						<p data-description="2014">Because every kid should get to be Tarzan for a day.</p>
+						<p data-description="2015">And the world rejoiced.</p>
+						<p data-description="2016">Because building roads is inconvenient.</p>
+						<p data-description="2018">Because paper currency is for noobs.</p>
+						<p data-description="2021">Nobody likes cords. Nobody.</p>
+						<p data-description="2021-1">Nobody likes cords. Nobody.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Contact section -->
 	<section id="contact">
 		<div class="contact container">
@@ -197,15 +252,13 @@
 						<div class="icon">
 							<img src="https://img.icons8.com/clouds/100/000000/linkedin.png" alt="linkedIn icon"/>
 						</div>
-						<div class="icon">
-							<img src="https://img.icons8.com/clouds/100/000000/github.png" alt="GitHub icon"/>
-						</div>
 					</div>
 					<div class="contact-info">
 						<h1>Social Media</h1>
 						<div class="contact-info-row">
 							<a href="https://github.com/sigesig"><h2>GitHub</h2></a>
 							<a href="https://www.linkedin.com/in/victor-kjelde/"><h2>LinkedIn</h2></a>
+							<a href="https://gitlab.com/sigesig"><h2>GitLab</h2></a>
 						</div>
 					</div>
 				</div>
@@ -254,6 +307,20 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			if (localStorage.getItem("my_app_name_here-quote-scroll") != null) {
+				$(window).scrollTop(localStorage.getItem("my_app_name_here-quote-scroll"));
+			}
+
+			$(window).on("scroll", function() {
+				localStorage.setItem("my_app_name_here-quote-scroll", $(window).scrollTop());
+			});
+
+		});
+	</script>
 </body>
 
 </html>
