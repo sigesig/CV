@@ -6,27 +6,28 @@ $pointer-space: 20px;
 #hero .scroll-arrow {
 	width: $stem-width;
 	height: $stem-height;
-	margin-left: auto;
-	margin-right: auto;
 	border-radius: 3px;
 	background-color: white;
 	background: linear-gradient(to bottom, rgba(255,255,255,0), white 75%);
 	-webkit-animation: 3s soft-blink infinite alternate;
 	animation: 3s soft-blink infinite alternate;
-	position: relative;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
 	opacity: 0;
 }
 
 @-webkit-keyframes soft-blink {
 	0% { opacity: 0; }
 	50% { opacity: 0; }
-	100% { opacity: 0.8; }
+	100% { opacity: 0.6; }
 }
 
 @keyframes soft-blink {
 	0% { opacity: 0; }
 	50% { opacity: 0; }
-	100% { opacity: 0.8; }
+	100% { opacity: 0.6; }
 }
 
 #hero .scroll-arrow:after {
