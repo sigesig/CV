@@ -26,6 +26,13 @@ menu_item.forEach((item) => {
 	});
 });
 
+function outputsize() {
+	document.getElementById("hero-content").style.top = document.getElementById("header-id").offsetHeight + "px"
+}
+outputsize()
+
+new ResizeObserver(outputsize).observe(document.getElementById("header-id"))
+
 
 
 // Helper functions
