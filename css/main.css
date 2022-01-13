@@ -702,9 +702,9 @@ p {
 #about .personal-skills ul {
 	list-style: none;
 	margin-bottom: 15px;
-	columns: 4;
-	-webkit-columns: 4;
-	-moz-columns: 4;
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
 }
 
 #about .personal-skills ul li:before {
@@ -719,11 +719,14 @@ p {
 	font-weight: 300;
 	letter-spacing: .05rem;
 	color: black;
+	text-align: left;
 }
 
 #about .personal-skills {
 	width: 100%;
 	float: right;
+	display: flex;
+	justify-content: space-around;
 }
 
 #about .personal-skills h2 {
@@ -1062,6 +1065,14 @@ p {
 		border: 7px solid var(--main-bg-color);
 	}
 
+	#about .personal-skills ul {
+		list-style: none;
+		margin-bottom: 15px;
+		columns: 4;
+		-webkit-columns: 4;
+		-moz-columns: 4;
+	}
+
 	#about .about-info {
 		text-align: left;
 		padding: 30px;
@@ -1113,6 +1124,13 @@ p {
 		width: 100%;
 		text-align: center;
 		padding-left: 20px;
+	}
+
+	#about .personal-skills {
+		width: 100%;
+		float: right;
+		display: flex;
+		justify-content: normal;
 	}
 }
 
