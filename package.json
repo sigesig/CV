@@ -6,8 +6,8 @@
   "license": "",
   "author": "",
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
+    "build": "parcel build pages/VictorCV/victorcv.html",
+    "dev": "parcel pages/VictorCV/victorcv.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
