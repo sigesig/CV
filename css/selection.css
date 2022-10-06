@@ -47,18 +47,19 @@ body {
 	text-align: center;
 }
 
-
+/*TODO: Change this value so it fits better on mobile screen*/
 .wrapper .caption h1 {
 	text-transform: uppercase;
 	letter-spacing: 0.25em;
 	margin-bottom:0.5em;
+	font-size: 1.4rem;
 }
-
+/*TODO: Change this value so it fits better on mobile screen*/
 .wrapper .caption h4 {
 	text-transform: uppercase;
 	letter-spacing: 0.16em;
 	margin-bottom:1.2em;
-	font-size: 1rem;
+	font-size: 0.7rem;
 }
 
 
@@ -101,6 +102,33 @@ body {
 
 @media screen and (min-width:1200px) {
 
+	.wrapper .caption h1 {
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		margin-bottom:0.5em;
+	}
+
+	.wrapper .caption h4 {
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		margin-bottom:1.2em;
+		font-size: 1rem;
+	}
+
+	.wrapper {
+		display: flex;
+	}
+
+
+	.wrapper .left,
+	.wrapper .right {
+		width: 50%;
+		height: 100vh;
+	}
+
+}
+
+@media screen and (orientation:landscape) and (max-width:1199px){
 	.wrapper {
 		display: flex;
 	}

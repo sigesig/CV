@@ -117,7 +117,7 @@ It's linked to from the HTML as follows:
 
 ```html
 
-<link rel="manifest" href="../tmp/site.webmanifest">
+<link rel="manifest" href="../pages/VictorCV/site.webmanifest">
 ```
 
 Our
