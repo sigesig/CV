@@ -47,7 +47,7 @@
 						<li><a href="#projects" data-after="Projects">Projects</a></li>
 						<li><a href="#about" data-after="About">About</a></li>
 						<li><a href="#timeline" data-after="timeline">Experience</a></li>
-						<li><a href="#skills" data-after="skills">Skills</a></li>
+<!--						<li><a href="#skills" data-after="skills">Skills</a></li>-->
 						<li><a href="#contact" data-after="Contact">Contact</a></li>
 					</ul>
 				</div>
@@ -69,39 +69,6 @@
 				<div class="scroll-arrow"></div>
 			</div>
   </section>
-
-	<!-- Service section -->
-	<!--<section id="service">
-		<div class="service container">
-			<div class="service-top">
-				<h1 class="section-title">Sk<span>i</span>lls</h1>
-				<p>Information about the skills section...</p>
-			</div>
-			<div class="service-bottom">
-				<div class="service-item">
-					<div class="icon"><img src="https://img.icons8.com/clouds/100/000000/services.png" alt="Services icon"/></div>
-					<h2>Software development</h2>
-					<p>Information information and more information</p>
-				</div>
-				<div class="service-item">
-					<div class="icon"><img src="https://img.icons8.com/clouds/100/000000/services.png" alt="Services icon"/></div>
-					<h2>Software development</h2>
-					<p>Information information and more information</p>
-				</div>
-				<div class="service-item">
-					<div class="icon"><img src="https://img.icons8.com/clouds/100/000000/services.png" alt="Services icon"/></div>
-					<h2>Software development</h2>
-					<p>Information information and more information</p>
-				</div>
-				<div class="service-item">
-					<div class="icon"><img src="https://img.icons8.com/clouds/100/000000/services.png" alt="Services icon"/></div>
-					<h2>Software development</h2>
-					<p>Information information and more information</p>
-				</div>
-
-			</div>
-		</div>
-	</section>-->
 
 	<!-- Projects section -->
 	<section id="projects">
@@ -126,11 +93,11 @@
 				</div>
 				<div class="project-item">
 					<div class="project-info">
-						<h1>Discord Bot</h1>
+						<h1>Discord Bot and Monitoring</h1>
 						<h2>Discord Bot for friends to play music etc.</h2>
 						<p>
-							I developed a Discord Bot using JavaScript for me and my friends to use.
-							Implemented a music player into the bot, by fetching music using YouTube.
+							I developed a Discord Bot using Typescript for me and my friends to use.
+							I implemented a music player into the bot, by fetching music using YouTube.
 							With support for Spotify by fetching metadata using the Spotify API, then
 							search YouTube with the fetched data.
 						</p>
@@ -160,7 +127,7 @@
 						<h2>Omnidirectional RC car with an Arduino and Mecanum wheels</h2>
 						<p>
 							As a final exam project at HTX, I created an RC car that used Mecanum
-							wheels, and an Arduino development board as a brain. Controlling the robot
+							wheels, and an Arduino development board as a brain. Control of the robot was done
 							with Bluetooth through an app I developed for the purpose.
 						</p>
 					</div>
@@ -207,10 +174,26 @@
 							Augmented Reality it relies on Unity’s AR Foundation and for connecting the two applications it uses the
 							Photon Engine to power the networking.
 						</p>
-						<a href="https://github.com/sigesig/hybrid-blended-xr-spaces">Git Repository</a>
+<!--						<a href="https://github.com/sigesig/hybrid-blended-xr-spaces">Git Repository</a>-->
 					</div>
 					<div class="project-img">
 						<img src="../../img/projects_imgs/blendedspaces.png" alt="Blended spaces sketch">
+					</div>
+				</div>
+				<div class="project-item">
+					<div class="project-info">
+						<h1>Deep learning for Medical Image Segmentation for detecting Pneumonia</h1>
+						<h2>Using Python and the U-Net Model for Medical Image Segmentation</h2>
+						<p>
+							This a system	that connects head-mounted displays and mobile phones to the same blended space. Allowing them to interact with shared objects using a set of gestures.
+							The system consists of two Unity applications, one made for mobile phone users and one for an Oculus Quest 2. In order to support
+							Augmented Reality it relies on Unity’s AR Foundation and for connecting the two applications it uses the
+							Photon Engine to power the networking.
+						</p>
+<!--						<a href="https://colab.research.google.com/drive/1LcQvPAH1Tds3OGa5WEoX7ZoREcvaPBjn?usp=sharing">Google Colab</a>-->
+					</div>
+					<div class="project-img">
+						<img src="../../img/projects_imgs/Deeplearning.png" alt="Deep learning model results">
 					</div>
 				</div>
 			</div>
@@ -228,12 +211,13 @@
 			<div class="about-info">
 				<h1 class="section-title">About <span>me</span></h1>
 				<h2>Software Developer</h2>
-				<p>Newly graduated software developer with some experience and a drive for
+				<p>Software developer with some experience and a drive for
 					clean code. In my spare time, I like to fiddle with different software projects,
 					other hobby projects, and hanging out with friends.
 					Currently, I’m studying for a master’s degree in computer science at
 					Aarhus University with specialization in Algorithms, Cryptography, and
-					Ubiquitous Computing and Interaction.
+					Ubiquitous Computing and Interaction. My master's thesis is centered on light-weight cryptography, which entails the development/analysis
+					of cryptographic algorithms and protocols optimized for efficiency in computation, memory usage, power consumption, and code size.
 				</p>
 				<h2>Personal skills</h2>
 				<div class="personal-skills">
@@ -301,19 +285,19 @@
 						<p data-description="2016">After A year at Café Holmen I stopped working there. I got a part-time job at Libratone A/S as their warehouse janitor, while still doing the warehouse work in some holidays/weekends. Also, I started as a floorball coach for a youth team at Skive Floorbal.</p>
 						<p data-description="2018">I finished studying at Skive College HTX, and moved to Aarhus to study a bachelors degree in Computer Science. I stopped working at Libratone A/S after I had developed a device for testing the quality in the wireless speakers.</p>
 						<p data-description="2021">I finished my bachelors degree in Computer Science at Aarhus University. After finishing my bachelor degree, I began studying for a masters degree in Computer Science at Aarhus University.</p>
-						<p data-description="2021-1">Started working part-time at Systematic A/S as a Junior Systems Engineer.</p>
+						<p data-description="2021-1">Started working part-time at Systematic A/S as a Junior Developer.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<!-- Skills section -->
+<!--
+	&lt;!&ndash; Skills section &ndash;&gt;
 	<section id="skills">
 		<div class="skills container">
 			<h1 class="section-title">Sk<span>i</span>lls</h1>
 		</div>
-	</section>
+	</section>-->
 
 	<!-- Contact section -->
 	<section id="contact">
