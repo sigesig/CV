@@ -118,7 +118,7 @@
   display: none;
 }
 
-input[data-description="2013"]:checked ~ #timeline-descriptions-wrapper p[data-description="2013"] {
+input[data-description="2023"]:checked ~ #timeline-descriptions-wrapper p[data-description="2023"] {
   display: block;
 }
 
