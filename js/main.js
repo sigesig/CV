@@ -50,6 +50,27 @@ function detectBrowser() {
 	}
 }
 
+// Timeline functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineInputs = document.querySelectorAll('input[name="timeline-dot"]');
+    
+    timelineInputs.forEach(input => {
+        input.addEventListener('change', function() {
+            if (this.checked) {
+                // Remove active class from all descriptions
+                const descriptions = document.querySelectorAll('#timeline-descriptions-wrapper p');
+                descriptions.forEach(desc => desc.style.display = 'none');
+                
+                // Show the selected description
+                const selectedDescription = document.querySelector(`#timeline-descriptions-wrapper p[data-description="${this.dataset.description}"]`);
+                if (selectedDescription) {
+                    selectedDescription.style.display = 'block';
+                }
+            }
+        });
+    });
+});
+
 // kick off the polyfill!
 //import smoothscroll from 'smoothscroll-polyfill';
 //smoothscroll.polyfill();
