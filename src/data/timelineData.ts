@@ -33,5 +33,10 @@ export const timelineData = {
     year: '2023',
     label: 'M.Sc in CS finished',
     description: 'I finished my masters degree in Computer Science at Aarhus University, with specialization in Algorithms, Cryptography, and Ubiquitous Computing and Interaction. My master\'s thesis was centered on light-weight cryptography.'
+  },
+  '2024': {
+    year: '2024',
+    label: 'Current Status',
+    description: 'Currently seeking new opportunities to apply my expertise in software development, cryptography, and computer science. Open to full-time positions in software engineering, security, or related fields.'
   }
 }
