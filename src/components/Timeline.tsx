@@ -6,9 +6,12 @@ import { timelineData } from '@/data/timelineData'
 export default function Timeline() {
   const [selectedYear, setSelectedYear] = useState('')
 
-  const handleTimelineClick = (key: string) => {
-    console.log('Timeline clicked:', key, 'Current selected:', selectedYear)
-    setSelectedYear(selectedYear === key ? '' : key)
+  // Sort timeline data by sortOrder to ensure chronological order
+  const sortedTimelineData = [...timelineData].sort((a, b) => a.sortOrder - b.sortOrder)
+
+  const handleTimelineClick = (id: string) => {
+    console.log('Timeline clicked:', id, 'Current selected:', selectedYear)
+    setSelectedYear(selectedYear === id ? '' : id)
   }
 
   return (
@@ -27,9 +30,9 @@ export default function Timeline() {
             
             {/* Timeline Items */}
             <div className="space-y-12">
-              {Object.entries(timelineData).map(([key, data], index) => (
+              {sortedTimelineData.map((data, index) => (
                 <div 
-                  key={key}
+                  key={data.id}
                   className={`relative flex items-start ${
                     index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   } flex-col lg:gap-16`}
@@ -37,12 +40,15 @@ export default function Timeline() {
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 z-10 hidden lg:block">
                     <button
-                      onClick={() => handleTimelineClick(key)}
-                      className={`w-6 h-6 rounded-full border-4 transition-all duration-300 hover:scale-125 ${
-                        selectedYear === key
+                      onClick={() => handleTimelineClick(data.id)}
+                      className={`w-6 h-6 rounded-full border-4 transition-all duration-300 hover:scale-125 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 ${
+                        selectedYear === data.id
                           ? 'bg-teal-600 border-teal-600 shadow-lg shadow-teal-200'
                           : 'bg-white border-teal-300 hover:border-teal-500'
                       }`}
+                      aria-expanded={selectedYear === data.id}
+                      aria-controls={`timeline-content-${data.id}`}
+                      aria-label={`${data.year} - ${data.label}. Click to ${selectedYear === data.id ? 'collapse' : 'expand'} details.`}
                     >
                       <span className="sr-only">{data.year} - {data.label}</span>
                     </button>
@@ -52,12 +58,12 @@ export default function Timeline() {
                   <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? '' : 'lg:text-right'}`}>
                     <div 
                       className={`group cursor-pointer transition-all duration-300 ${
-                        selectedYear === key ? '' : 'hover:scale-105'
+                        selectedYear === data.id ? '' : 'hover:scale-105'
                       }`}
-                      onClick={() => handleTimelineClick(key)}
+                      onClick={() => handleTimelineClick(data.id)}
                     >
                       <div className={`relative rounded-xl shadow-lg transition-all duration-300 overflow-hidden ${
-                        selectedYear === key 
+                        selectedYear === data.id 
                           ? 'bg-gradient-to-br from-teal-50 to-white border-2 border-teal-200 shadow-xl' 
                           : 'bg-white border border-gray-200 hover:shadow-xl hover:border-teal-100'
                       }`}>
@@ -67,7 +73,7 @@ export default function Timeline() {
                             ? '-right-2 border-r-0 border-b-0' 
                             : '-left-2 border-l-0 border-t-0'
                         } ${
-                          selectedYear === key 
+                          selectedYear === data.id 
                             ? 'border-teal-200 bg-teal-50' 
                             : 'border-gray-200 group-hover:border-teal-100'
                         }`}></div>
@@ -76,7 +82,7 @@ export default function Timeline() {
                         <div className="p-6">
                           {/* Year Badge */}
                           <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-bold mb-3 ${
-                            selectedYear === key
+                            selectedYear === data.id
                               ? 'bg-teal-600 text-white'
                               : 'bg-gray-100 text-gray-700 group-hover:bg-teal-100 group-hover:text-teal-700'
                           }`}>
@@ -88,30 +94,34 @@ export default function Timeline() {
 
                           {/* Title */}
                           <h3 className={`text-xl font-bold mb-3 transition-colors ${
-                            selectedYear === key ? 'text-teal-800' : 'text-gray-800 group-hover:text-teal-700'
+                            selectedYear === data.id ? 'text-teal-800' : 'text-gray-800 group-hover:text-teal-700'
                           }`}>
                             {data.label}
                           </h3>
 
                           {/* Content - Always show, but expand when selected */}
-                          <div className={`transition-all duration-500 ease-in-out relative ${
-                            selectedYear === key ? 'max-h-none' : 'max-h-16 overflow-hidden'
-                          }`}>
+                          <div 
+                            id={`timeline-content-${data.id}`}
+                            className={`transition-all duration-500 ease-in-out relative ${
+                              selectedYear === data.id ? 'max-h-none' : 'max-h-16 overflow-hidden'
+                            }`}
+                            aria-expanded={selectedYear === data.id}
+                          >
                             <p className="text-gray-700 leading-relaxed">
                               {data.description}
                             </p>
                             
                             {/* Gradient fade for collapsed content */}
-                            {selectedYear !== key && (
+                            {selectedYear !== data.id && (
                               <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
                             )}
                           </div>
 
                           {/* Expand/Collapse Indicator */}
                           <div className={`mt-4 text-sm font-medium transition-all duration-300 flex items-center ${
-                            selectedYear === key ? 'text-teal-600' : 'text-gray-400 group-hover:text-teal-500'
+                            selectedYear === data.id ? 'text-teal-600' : 'text-gray-400 group-hover:text-teal-500'
                           } ${index % 2 === 0 ? '' : 'lg:justify-end'}`}>
-                            {selectedYear === key ? (
+                            {selectedYear === data.id ? (
                               <>
                                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                   <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
@@ -136,7 +146,7 @@ export default function Timeline() {
                   {/* Mobile Timeline Dot */}
                   <div className="lg:hidden w-full flex justify-center my-4">
                     <div className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                      selectedYear === key ? 'bg-teal-600 scale-125' : 'bg-gray-300'
+                      selectedYear === data.id ? 'bg-teal-600 scale-125' : 'bg-gray-300'
                     }`}></div>
                   </div>
 

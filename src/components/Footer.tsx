@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white" role="contentinfo">
       <div className="container mx-auto px-4 py-12">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -42,7 +42,8 @@ export default function Footer() {
                 <Link 
                   key={item.href}
                   href={item.href} 
-                  className="text-gray-300 hover:text-teal-400 transition-colors duration-200 py-1"
+                  className="text-gray-300 hover:text-teal-400 transition-colors duration-200 py-1 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                  {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 >
                   {item.label}
                 </Link>
@@ -98,8 +99,10 @@ export default function Footer() {
                 <Link 
                   key={social.href}
                   href={social.href} 
-                  className="group p-3 bg-gray-700 hover:bg-teal-600 rounded-lg transition-all duration-300 hover:scale-110"
-                  aria-label={social.label}
+                  className="group p-3 bg-gray-700 hover:bg-teal-600 rounded-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit Victor's ${social.label} profile (opens in new tab)`}
                 >
                   <div className="text-gray-300 group-hover:text-white transition-colors">
                     {social.icon}

@@ -20,7 +20,14 @@ export default function Projects() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <Image src="/img/projects_imgs/evoting.jpg" alt="E-voting system" width={500} height={300} className="rounded-lg shadow-lg" />
+              <Image 
+                src="/img/projects_imgs/evoting.jpg" 
+                alt="Electronic voting system interface showing secure ballot submission" 
+                width={500} 
+                height={300} 
+                className="rounded-lg shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -38,7 +45,14 @@ export default function Projects() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <Image src="/img/projects_imgs/discord-bot.png" alt="Discord bot" width={500} height={300} className="rounded-lg shadow-lg" />
+              <Image 
+                src="/img/projects_imgs/discord-bot.png" 
+                alt="Discord bot interface with music player controls and monitoring dashboard" 
+                width={500} 
+                height={300} 
+                className="rounded-lg shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -54,7 +68,14 @@ export default function Projects() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <Image src="/img/projects_imgs/battery-test.jpg" alt="Battery tester" width={500} height={300} className="rounded-lg shadow-lg" />
+              <Image 
+                src="/img/projects_imgs/battery-test.jpg" 
+                alt="Arduino-based battery testing device for wireless speakers" 
+                width={500} 
+                height={300} 
+                className="rounded-lg shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -70,7 +91,14 @@ export default function Projects() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <Image src="/img/projects_imgs/HTX.jpg" alt="Omnidirectional RC car" width={500} height={300} className="rounded-lg shadow-lg" />
+              <Image 
+                src="/img/projects_imgs/HTX.jpg" 
+                alt="Omnidirectional RC car with Mecanum wheels and Arduino controller" 
+                width={500} 
+                height={300} 
+                className="rounded-lg shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -88,7 +116,14 @@ export default function Projects() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <Image src="/img/projects_imgs/indoor-climate.jpg" alt="Indoor climate control system" width={500} height={300} className="rounded-lg shadow-lg" />
+              <Image 
+                src="/img/projects_imgs/indoor-climate.jpg" 
+                alt="IoT indoor climate monitoring system with Raspberry Pi and sensors" 
+                width={500} 
+                height={300} 
+                className="rounded-lg shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -106,7 +141,14 @@ export default function Projects() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <Image src="/img/projects_imgs/blendedspaces.png" alt="Blended spaces sketch" width={500} height={300} className="rounded-lg shadow-lg" />
+              <Image 
+                src="/img/projects_imgs/blendedspaces.png" 
+                alt="AR blended spaces system connecting HMDs and mobile phones" 
+                width={500} 
+                height={300} 
+                className="rounded-lg shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -122,7 +164,14 @@ export default function Projects() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <Image src="/img/projects_imgs/Deeplearning.png" alt="Deep learning model results" width={500} height={300} className="rounded-lg shadow-lg" />
+              <Image 
+                src="/img/projects_imgs/Deeplearning.png" 
+                alt="U-Net deep learning model results for pneumonia detection in X-ray images" 
+                width={500} 
+                height={300} 
+                className="rounded-lg shadow-lg"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>

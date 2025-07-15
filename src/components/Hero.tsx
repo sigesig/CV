@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
           <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-            Hello
+            Hello,
           </h1>
           <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
             My name is
@@ -25,10 +25,13 @@ export default function Hero() {
         <div className="lg:w-1/2 flex justify-center">
           <Image
             src="/img/kjelde-pic.jpg"
-            alt="Profile Picture"
+            alt="Victor Kjelde profile picture"
             width={400}
             height={400}
             className="rounded-full shadow-2xl"
+            priority
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
         </div>
       </div>
