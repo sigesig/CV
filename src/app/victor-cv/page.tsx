@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Victor Kjelde', url: 'https://kjelde.dk' }],
   creator: 'Victor Kjelde',
   openGraph: {
-    title: 'Victor Kjelde - Software Engineer & Computer Scientist',
+    title: 'Victor Kjelde - Software Developer & Computer Scientist',
     description: 'Experienced software developer specializing in cryptography, algorithms, and full-stack development.',
     type: 'profile',
     locale: 'en_US',
@@ -106,6 +106,7 @@ export default function VictorCV() {
       <Hero />
       <Projects />
       <About />
+      {/*<Skills />*/}
       <Timeline />
       <Contact />
       <Footer />

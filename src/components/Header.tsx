@@ -11,6 +11,7 @@ export default function Header() {
     { href: '#hero', label: 'Home' },
     { href: '#projects', label: 'Projects' },
     { href: '#about', label: 'About' },
+    { href: '#skills', label: 'Skills' },
     { href: '#timeline', label: 'Experience' },
     { href: '#contact', label: 'Contact' }
   ]
