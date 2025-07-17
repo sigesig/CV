@@ -43,7 +43,7 @@ export default function Header() {
               <Link 
                 key={item.href}
                 href={item.href} 
-                className="px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-full transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                className="px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-full transition-all duration-200 font-medium text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                 role="menuitem"
               >
                 {item.label}
@@ -80,7 +80,7 @@ export default function Header() {
               <Link 
                 key={item.href}
                 href={item.href} 
-                className="block px-4 py-3 text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                className="block px-4 py-3 text-gray-700 hover:text-teal-600 hover:bg-teal-50 transition-colors text-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                 role="menuitem"
                 onClick={() => setIsMenuOpen(false)}
               >
